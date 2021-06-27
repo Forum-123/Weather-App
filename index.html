@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container my-5" style="max-width: 450px;">
+        <!-- Place input -->
+        <h1 class="text-center title">Weather in...</h1>
+        <form class="form-group searchCity">
+            <i class="fa fa-search icon"></i>
+            <input type="text" id="Place" class="form-control text-muted form-rounded shadow-sm input-field mx-auto" placeholder="Enter city" autocomplete="off" style="border-radius: 2em;">
+            <span class="text-danger" id="usernameErrorMessage"></span>
+        </form>
+
+        <!-- Image -->
+        <div class="card card-image my-3 shadow-lg d-none" style="border-radius: 1em;">
+            <div class="top text-center">
+                <div class="city" style="padding-top: 2em;">
+                    <p class="city-name">London</p>
+                    <p class="city-description">Country: </p>
+                </div>
+                <img src="images/day.jpg" alt="" class="time"/>
+            </div>
+
+            <!-- Content -->
+            <div class="card-body">
+                <div class="middle row" style="padding-bottom: 0.5em;">
+                    <div class="col text-center temperature">
+                        <p>30&deg;C</p>
+                    </div>
+                    <div class="col weather-icon card shadow mx-auto">
+                        <img src="images/cloud.jpg" alt=""/>
+                    </div>
+                    <div class="col weather">
+                        <p class="data-condition">Clear</p>
+                        <p class="data">H: 30&deg;C</p>
+                        <p class="data">L: 27&deg;C</p>
+                    </div>
+                </div>
+                <div class="bottom px-3 py-3 row">
+                    <div class="col text-center">
+                        <p class="data-title">FEELS LIKE</p>
+                        <p class="data">30&deg;C</p>
+                    </div>
+                    <div class="col text-center">
+                        <p class="data-title">HUMIDITY</p>
+                        <p class="data">55%</p>
+                    </div>
+                    <div class="col text-center">
+                        <p class="data-title">PRESSURE</p>
+                        <p class="data">1010hPa</p>
+                    </div>
+                    <div class="col text-center">
+                        <p class="data-title">VISIBILITY</p>
+                        <p class="data">16.1km</p>
+                    </div>
+                    <div class="col text-center">
+                        <p class="data-title">WIND SPEED</p>
+                        <p class="data">2.6mph</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="request.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

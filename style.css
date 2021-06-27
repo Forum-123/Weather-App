@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f3f2f2;
+    color: #5a5a5a;
+    margin: 0%;
+    padding: 0%;
+}
+
+.title {
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+.form-group i {
+    position: absolute;
+}
+
+.form-group {
+    width: 90%;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.searchCity i {
+    padding: 10px;
+    min-width: 40px;
+}
+
+input[type = text] {
+    width: 100%;
+    padding-left: 30px;
+}
+
+.top img {
+    border-radius: 1em;
+    z-index: 0;
+}
+
+.city {
+    position: absolute;
+    width: 100%;
+}
+
+.city-name {
+    font-weight: 600;
+    font-size: x-large;
+    position: relative;
+    z-index: 1;
+}
+
+.city-description {
+    font-weight: 400;
+    font-size: medium;
+    position: relative;
+    top: -15px;
+    z-index: 1;
+}
+
+.temperature p{
+    font-size: 4em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: -2px;
+    white-space: nowrap;
+}
+
+.weather-icon {
+    border-radius: 100%;
+    max-width: 6em;
+    height: 6em;
+    background: transparent;
+}
+
+.weather-icon img {
+    margin: auto;
+    transform: scale(1.5);
+}
+
+.data-condition {
+    line-height: 1;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.data {
+    line-height: 0.5;
+    font-weight: 700;
+    font-size: large;
+    letter-spacing: 1px;
+}
+
+.data-title {
+    line-height: 1;
+    font-size: smaller;
+}
