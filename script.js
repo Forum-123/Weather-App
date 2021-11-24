@@ -72,26 +72,22 @@ updateWeather = (city) => {
         time.setAttribute('src', "images/day.jpg");
         if (cityName.classList.contains('text-white')){
             cityName.classList.remove('text-white');
-        } else {
             cityName.classList.add('text-black');
         }
         
         if (cityDescription.classList.contains('text-white')){
             cityDescription.classList.remove('text-white');
-        } else {
             cityDescription.classList.add('text-black');
         }
     } else {
         time.setAttribute('src', "images/night.jpg");
         if (cityName.classList.contains('text-black')){
             cityName.classList.remove('text-black');
-        } else {
             cityName.classList.add('text-white');
         }
        
         if (cityDescription.classList.contains('text-black')){
             cityDescription.classList.remove('text-black');
-        } else {
             cityDescription.classList.add('text-white');
         }
     }
