@@ -8,7 +8,7 @@ fetch(currentWeather)
     .catch((error)=>{console.log(error)});
 
 const requestCity = async (city) => {
-    const currentWeather = 'http://api.openweathermap.org/data/2.5/weather'
+    const currentWeather = 'https://api.openweathermap.org/data/2.5/weather'
     const query = '?q=' + city + '&appid=' + key;
 
     const response = await fetch(currentWeather + query);
