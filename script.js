@@ -81,7 +81,7 @@ updateWeather = (city) => {
             cityDescription.classList.remove('text-white');
             cityDescription.classList.add('text-black');
         } else {
-             cityName.classList.add('text-black');
+            cityDescription.classList.add('text-black');
         }
         
     } else {
@@ -97,7 +97,7 @@ updateWeather = (city) => {
             cityDescription.classList.remove('text-black');
             cityDescription.classList.add('text-white');
         } else {
-             cityName.classList.add('text-white');
+             cityDescription.classList.add('text-white');
         }
     }
     cardImage.classList.remove('d-none');
