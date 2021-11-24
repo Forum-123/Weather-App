@@ -6,6 +6,7 @@
 - It displays weather data of the city on the date the user has accessed the website
 - To use the app, the user must enter a city name (not case sensitive) and press ‘enter’, which will refresh the page
 - It fetches data from an OpenWeatherMap API and updates live
+- This application can be accessed [here](https://weather-app-cs50.netlify.app/)
 
 - When the user enters in a city name in the top searchbar:
     - The city and country names will change, based on the user’s input
