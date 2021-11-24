@@ -8,29 +8,29 @@ const cardImage = document.querySelector('.card-image')
 
 const Celcius = (kelvinTemp) => {
     celcius = Math.round(kelvinTemp - 273.15);
-    return celcius
+    return celcius;
 };
 
 const Visibility = (m) => {
     km = m / 1000;
-    return km
+    return km;
 };
 
 const dayTime = (icon) => {
-    if (icon.includes('d')) { return true }
-    else { return false }
+    if (icon.includes('d')) { 
+        return true; 
+    } else {
+        return false;
+    }
 };
 
+// Show result from API request to site
 updateWeather = (city) => {
-    console.log(city)
     const weatherIconCode = city.weather[0].icon;
-    console.log(weatherIconCode)
-    const weatherIconSrc = `http://openweathermap.org/img/wn/${weatherIconCode}.png`
+    const weatherIconSrc = `https://openweathermap.org/img/wn/${weatherIconCode}.png`
     cityName.textContent = city.name;
-    cityDescription.innerHTML = `
-        Country: ${city.sys.country}
-    `
-    topContent.innerHTML = `
+    cityDescription.textContent = `Country: ${city.sys.country}`
+    topContent.textContent = `
         <div class="middle row" style="padding-bottom: 0.5em;">
             <div class="col text-center temperature">
                 <p>${Celcius(city.main.temp)}&deg;C</p>
@@ -67,46 +67,40 @@ updateWeather = (city) => {
             </div>
         </div>`;
 
+    // Change text colour depending on weather image
     if (dayTime(weatherIconCode)) {
-        console.log('Day');
         time.setAttribute('src', "images/day.jpg");
         if (cityName.classList.contains('text-white')){
             cityName.classList.remove('text-white');
-        }
-        else {
+        } else {
             cityName.classList.add('text-black');
         }
+        
         if (cityDescription.classList.contains('text-white')){
             cityDescription.classList.remove('text-white');
-        }
-        else {
+        } else {
             cityDescription.classList.add('text-black');
         }
-    }
-    else {
-        console.log('Night');
+    } else {
         time.setAttribute('src', "images/night.jpg");
         if (cityName.classList.contains('text-black')){
             cityName.classList.remove('text-black');
-        }
-        else {
+        } else {
             cityName.classList.add('text-white');
         }
+       
         if (cityDescription.classList.contains('text-black')){
             cityDescription.classList.remove('text-black');
-        }
-        else {
+        } else {
             cityDescription.classList.add('text-white');
         }
     }
-
     cardImage.classList.remove('d-none');
 }
 
 search.addEventListener('submit', (city) => {
     city.preventDefault();
     const cityEntered = cityInput.value.trim();
-    console.log(cityEntered);
     search.reset();
 
     requestCity(cityEntered)
