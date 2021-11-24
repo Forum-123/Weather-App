@@ -30,7 +30,7 @@ updateWeather = (city) => {
     const weatherIconSrc = `https://openweathermap.org/img/wn/${weatherIconCode}.png`
     cityName.textContent = city.name;
     cityDescription.textContent = `Country: ${city.sys.country}`
-    topContent.textContent = `
+    topContent.innerHTML = `
         <div class="middle row" style="padding-bottom: 0.5em;">
             <div class="col text-center temperature">
                 <p>${Celcius(city.main.temp)}&deg;C</p>
